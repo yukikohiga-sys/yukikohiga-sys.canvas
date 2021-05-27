@@ -7,7 +7,7 @@ function setup() {
   createCanvas(400, 300);
 
   textAlign(CENTER, CENTER);
-  textSize(50);
+  textSize(52);
 }
 
 function draw() {
