@@ -1,35 +1,37 @@
 
-let emoji = "🌕";
+let emoji = `🍔🍩🍞🍰🍊🍹
+
+🍹🍊🍰🍞🍩🍔`;
 
 function setup() {
   createCanvas(400, 300);
 
-  // 文字の基準点を中心に
   textAlign(CENTER, CENTER);
-  // 文字の大きさを設定
   textSize(50);
 }
 
 function draw() {
-  background("#7dd0b6");
+  background("#ffcc00");
 
-  // キーが押されている間の処理
-  if (mouseIsPressed) {
-    emoji = `🍰🍓🔴🍑🌕🥚
-
-🥚🌕🍑🔴🍓🍰`;
-    }
-  // キーが押されていない間の処理
-  else {
-    emoji = `🥚🌕🍑🔴🍓🍰
-
-🍰🍓🔴🍑🌕🥚`;
-  }
-
-  // 文字の表示
+  // テキストの表示
   text(emoji, width / 2, height / 2);
 }
 
+// キーが押された瞬間の処理
+function mousePressed() {
+  // 変数の中身によってテキストを入れ替える
+  if (emoji == `🍔🍩🍞🍰🍊🍹
+
+🍹🍊🍰🍞🍩🍔`) {
+    emoji = `🍹🍊🍰🍞🍩🍔
+
+🍔🍩🍞🍰🍊🍹`;
+  } else {
+    emoji = `🍔🍩🍞🍰🍊🍹
+
+🍹🍊🍰🍞🍩🍔`;
+  }
+}
 
 
 
