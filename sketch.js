@@ -1,21 +1,25 @@
 
+let bg;
 let emoji = `🍔🍩🍞🍰🍊🍹
 
 🍹🍊🍰🍞🍩🍔`;
 
 function setup() {
+  // The background image must be the same size as the parameters
+  // into the createCanvas() method. In this program, the size of
+  // the image is 720x400 pixels.
+  bg = loadImage('haikei2.png');
   createCanvas(400, 300);
-
-  textAlign(CENTER, CENTER);
-  textSize(58);
 }
 
 function draw() {
-  background("#ffcc00");
+  background(bg);
 
-  // テキストの表示
+ textAlign(CENTER, CENTER);
+  textSize(50);
   text(emoji, width / 2, height / 2);
 }
+
 
 // キーが押された瞬間の処理
 function mousePressed() {
